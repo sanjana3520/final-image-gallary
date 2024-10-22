@@ -1,0 +1,144 @@
+body {
+    background-color: black;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+ }
+ 
+
+ .navbar {
+   background-color: #1f1f2e;
+   overflow: hidden;
+   position: fixed;
+   top: 0;
+   width: 100%;
+   z-index: 500;
+   display: flex;
+   justify-content: center;
+   padding: 10px 0; 
+   height: 50px;
+   font-style: poppins, sans-serif;
+}
+
+.gallery-container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 10px;
+   padding-top: 20px;
+   margin-top: 10px; 
+}
+
+ 
+
+
+ .p{
+    text-align: center;
+    color: #ffffff;
+    font-size: 3px;
+ }
+ 
+
+ .firstRow, .secondRow, .thirdRow {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+ }
+ 
+ 
+ img {
+    width: 450px;
+    height: 250px;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+ }
+ 
+ 
+ img:hover {
+    transform: scale(0.9);
+ }
+ 
+ 
+ 
+ 
+ .lightbox {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+ }
+ 
+ 
+ .lightbox-img {
+    max-width: 100%;
+    max-height: 90%;
+    border: 6px solid #fff;
+    object-fit: contain;
+ }
+ 
+ 
+ .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 30px;
+    cursor: pointer;
+ }
+ .lightbox-prev, .lightbox-next {
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    user-select: none;
+ }
+ 
+ 
+ .lightbox-prev {
+    left: 20px;
+ }
+ .lightbox-next {
+    right: 20px;
+ }
+
+
+/* 
+ Responsive adjustments */ 
+ @media (max-width: 768px) {
+    .navbar p {
+        font-size: 16px; 
+    }
+
+    img {
+        width: 100%; 
+        max-width: 100%;
+        height: auto;
+        margin: 5px 0; 
+    }
+
+    .firstRow, .secondRow, .thirdRow {
+        flex-direction: column; 
+        align-items: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar p {
+        font-size: 14px; }
+
+    .close, .lightbox-prev, .lightbox-next {
+        font-size: 24px;
+    }
+}
+ 
